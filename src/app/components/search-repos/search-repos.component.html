@@ -1,0 +1,50 @@
+<form class="form">
+  <mat-form-field class="width-80 search">
+    <input matInput placeholder="enter repository name..." [formControl]="nameFormControl" #name
+      [errorStateMatcher]="matcher">
+    <mat-error *ngIf="nameFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+
+<mat-spinner class="spinner" *ngIf="loading"></mat-spinner>
+
+<div *ngIf="repos">
+  <div *ngIf="repos.length > 0; then reposFound else noreposFound "></div>
+  <ng-template #reposFound>
+    <div class="container full-width">
+
+      <div *ngFor="let repo of repos">
+        <mat-card class="repo-card">
+          <mat-card-header>
+            <div mat-card-avatar class="repo-header-image"
+              [ngStyle]="{'background-image': 'url(' + repo.owner.avatar_url + ')'}"></div>
+            <mat-card-title>
+              <p>{{repo.name}}</p>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <p>{{repo.full_name}}</p>
+            </mat-card-subtitle>
+            <mat-card-subtitle>
+              stargazers : {{repo.stargazers_count}}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              {{repo.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <a (click)="onClick(repo.id)" mat-raised-button [routerLink]="[ '/repos', repo.id ]">Detials</a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
+    </div>
+  </ng-template>
+  <ng-template #noreposFound>
+    <p class="center-text">no repositories found with this name ...</p>
+  </ng-template>
+</div>
