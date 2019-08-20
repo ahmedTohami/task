@@ -6,22 +6,33 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Storing data in NgRx Store	
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I used the following from `ngrx`
+1. actions
+2. reducers
+3. effect
+4. service
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Use of RxJS	
 
-## Running unit tests
+in order to manage streams many opertors are used .
+1. map
+2. debounceTime
+3. distinctUntilChanged
+3. tap
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Responsiveness and UI design	
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+application is responsive on all viewports mobiles tablets and large screens using the following.
+1. sass and media queries
+2. angular material design
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Routed Views
+
+using `Router` and `ActivatedRoute` and router links to navigate between views and to send and get parameters from url.
+
+
