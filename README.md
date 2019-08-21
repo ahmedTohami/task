@@ -36,3 +36,22 @@ application is responsive on all viewports mobiles tablets and large screens usi
 using `Router` and `ActivatedRoute` and router links to navigate between views and to send and get parameters from url.
 
 
+## Size
+
+1.2 mb: 
+![alt text](https://github.com/ahmedTohami/task/blob/master/size.png "Logo Title Text 1")
+
+
+## Perfomance metrics
+
+metrics 97%: 
+![alt text](https://github.com/ahmedTohami/task/blob/master/audits.png "Logo Title Text 1")
+
+
+## Audits
+
+audits are so far idle: 
+![alt text](https://github.com/ahmedTohami/task/blob/master/idle.png "Logo Title Text 1")
+
+
+
